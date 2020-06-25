@@ -27,14 +27,14 @@ android {
             debuggable true
             signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField 'String', 'HOST', '"https://retoBCPws-bc478.firebaseio.com"'
+            buildConfigField 'String', 'HOST', '"https://retobcp.firebaseio.com/"'
         }
 
         release {
             minifyEnabled false
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField 'String', 'HOST', '"https://retoBCPws-bc478.firebaseio.com"'
+            buildConfigField 'String', 'HOST', '"https://retobcp.firebaseio.com/"'
         }
     }
     variantFilter { variant ->

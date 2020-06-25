@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface RetoBCPApi {
 
-    @GET("exchanges")
-    suspend fun getExchanges(): Response<List<ExchangeDTO>>
+    @GET("data.json")
+    suspend fun getExchanges(): Response<ExchangeDTO>
 }

@@ -1,5 +1,6 @@
 package com.retobcp.core.data.network.di
 
+import com.retobcp.BuildConfig
 import com.retobcp.core.data.network.RetoBCPApi
 import com.retobcp.core.data.utils.createOkHttpClient
 import com.retobcp.core.data.utils.createRetrofitNew
@@ -18,7 +19,7 @@ internal val networkModule = module {
 }
 
 private fun retrofitRetoBCP(okHttpClient: OkHttpClient): Retrofit {
-    return createRetrofitNew(okHttpClient, "https://flutterws-bc478.firebaseio.com/")
+    return createRetrofitNew(okHttpClient, BuildConfig.HOST)
 }
 
 private fun provideRetoBCPApi(retrofit: Retrofit): RetoBCPApi{
