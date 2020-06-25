@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:endColor="@color/skyblue_hover"
+        android:startColor="@color/skyblue_hover" />
+
+    <stroke
+        android:width="2dip"
+        android:color="@color/skyblue_hover" />
+
+</shape>

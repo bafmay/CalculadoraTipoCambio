@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RetoBCP</string>
+    <string name="content_description">content</string>
+    <string name="begin_operation">Empieza tu operación</string>
+    <string name="you_send">Tu envías</string>
+    <string name="you_obtain">Tu recibes</string>
+    <string name="exchange_rate_currency">1 %s = %s %s</string>
+    <string name="exchange_information">Compra: %s | Venta: %s</string>
+</resources>

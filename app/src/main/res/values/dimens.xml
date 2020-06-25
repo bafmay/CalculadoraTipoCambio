@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ds_16dp">16dp</dimen>
+    <dimen name="ds_32dp">32dp</dimen>
+    <dimen name="logo_width">200dp</dimen>
+    <dimen name="logo_width_splash">250dp</dimen>
+    <dimen name="ds_8dp">8dp</dimen>
+    <dimen name="ds_48dp">48dp</dimen>
+
+</resources>

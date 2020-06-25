@@ -1,0 +1,80 @@
+import pe.retobcp.Deps
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.retobcp"
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        develop {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'HOST', '"https://retoBCPws-bc478.firebaseio.com"'
+        }
+
+        release {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'HOST', '"https://retoBCPws-bc478.firebaseio.com"'
+        }
+    }
+    variantFilter { variant ->
+        if (variant.buildType.name == 'debug')
+            setIgnore(true)
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation Deps.Android.androidKTX
+    implementation Deps.Android.appCompat
+    implementation Deps.Android.constraintLayout
+
+    implementation Deps.Android.navigationFragment
+    implementation Deps.Android.navigationUI
+
+    implementation Deps.Libs.koin
+    implementation Deps.Libs.koinViewModel
+
+    implementation Deps.Libs.retrofit
+    implementation Deps.Libs.retrofitGsonConverter
+    implementation Deps.Libs.retrofitKotlinxConverter
+    implementation Deps.Libs.okHttpInterceptor
+    implementation Deps.Libs.kotlinSerialization
+
+
+    implementation Deps.Android.roomRuntime
+    annotationProcessor Deps.Android.roomCompiler
+    kapt Deps.Android.roomCompiler
+
+    testImplementation Deps.Test.mockk
+    testImplementation Deps.Test.mockkAndroid
+    implementation Deps.Test.coroutines
+    testImplementation Deps.Test.kluent
+    testImplementation Deps.Test.koinTest
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}

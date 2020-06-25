@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">@color/black</color>
+
+    <color name="black">#000000</color>
+    <color name="black_hover">#333333</color>
+    <color name="black_disable">#CCCCCC</color>
+    <color name="skyblue">#2DB4FF</color>
+    <color name="skyblue_hover">#2dc6ff</color>
+    <color name="skyblue_disable">#7acfff</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>
