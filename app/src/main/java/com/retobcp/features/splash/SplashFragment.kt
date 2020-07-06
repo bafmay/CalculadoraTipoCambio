@@ -34,7 +34,7 @@ class SplashFragment : BaseFragment(){
     }
 
     private fun syncSuccess() {
-        navigateTo(R.id.goToExchange)
+        navigateTo(R.id.action_splashFragment_to_welcomeFragment)
     }
 
 

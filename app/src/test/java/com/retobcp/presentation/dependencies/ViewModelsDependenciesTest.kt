@@ -5,8 +5,8 @@ import com.retobcp.features.exchange.ExchangeViewModel
 import com.retobcp.features.exchange_rate.ExchangeRateViewModel
 import com.retobcp.features.splash.SplashViewModel
 import org.amshove.kluent.shouldNotBeNull
-import org.koin.core.get
 import org.junit.Test
+import org.koin.core.get
 
 class ViewModelsDependenciesTest : BaseDependenciesTest(){
 
@@ -24,4 +24,6 @@ class ViewModelsDependenciesTest : BaseDependenciesTest(){
     fun `resolver dependencies for ExchangeViewModel`() {
         get<ExchangeViewModel>().shouldNotBeNull()
     }
+
+
 }

@@ -6,4 +6,7 @@
     <string name="you_obtain">Tu recibes</string>
     <string name="exchange_rate_currency">1 %s = %s %s</string>
     <string name="exchange_information">Compra: %s | Venta: %s</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="continuar">Continuar</string>
+    <string name="end">Salir</string>
 </resources>

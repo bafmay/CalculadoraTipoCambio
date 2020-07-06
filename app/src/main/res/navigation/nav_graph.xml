@@ -11,8 +11,8 @@
         android:label="SplashFragment"
         tools:layout="@layout/fragment_splash">
         <action
-            android:id="@+id/goToExchange"
-            app:destination="@id/exchangeFragment" />
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
     </fragment>
 
     <fragment
@@ -48,6 +48,15 @@
         tools:layout="@layout/fragment_exchange_rate" >
         <action
             android:id="@+id/returnToExchange"
+            app:destination="@id/exchangeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        tools:layout="@layout/fragment_welcome"
+        android:name="com.retobcp.features.welcome.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_exchangeFragment"
             app:destination="@id/exchangeFragment" />
     </fragment>
 

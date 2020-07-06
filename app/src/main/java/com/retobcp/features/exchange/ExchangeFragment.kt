@@ -91,6 +91,5 @@ class ExchangeFragment : BaseFragment() {
             exchange1.exchangeValue.toString(),
             exchange1.inchangeValue.toString()
         )
-
     }
 }
